@@ -1,15 +1,15 @@
-pipeline {
-    agent none 1
-    stages {
-        stage('Example Build') {
-            steps {
-                echo 'Hello, Maven'
-            }
-        }
-        stage('Example Test') {
-            steps {
-                echo 'Hello, JDK'
-            }
-        }
-    }
-}
+ pipeline {
+     agent any
+     stages {
+         stage('Build') {
+             steps {
+                 echo 'Building...'
+             }
+         }
+         stage('Deploy') {
+             steps {
+                 echo 'Deploying...'
+             }
+         }
+     }
+ }
